@@ -37,6 +37,9 @@ opt.lazyredraw = true
 -- sign column
 opt.signcolumn = 'yes'
 
+-- undo file
+opt.undofile = true
+
 -- colorscheme
 -- plugin variables
 vim.cmd [[
