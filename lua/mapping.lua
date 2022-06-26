@@ -29,7 +29,7 @@ map('t', '<esc>', '<c-\\><c-n>')
 
 -- fuzzy finder
 map('n', '<leader>ff', ':Telescope find_files<cr>')
-map('n', '<leader>fg', ':Telescope live_grep<cr>')
+map('n', '<leader>fg', ':Telescope grep_string<cr>')
 
 -- motion
 map('n', '<leader>hw', ':HopWord<cr>')
@@ -47,6 +47,5 @@ vim.cmd [[
     let region_name = input('Region Name? ')
     execute "normal " .. a:firstline .. "GV" .. a:lastline .. "GdO# region " .. region_name .. "\<CR>\<BS>\<BS>\<CR>\<CR># endregion " .. region_name .. "\<ESC>2kp"
   endfunction
-
   vnoremap <leader>wr :call WrapRegion()<cr>
 ]]

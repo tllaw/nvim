@@ -1,10 +1,12 @@
 local modules = {
-  'plugins',
-  'options',
-  'autocmd',
-  'mappings',
+  'plugin',
+  'option',
+  'mapping',
 }
 
 for _, module in ipairs(modules) do
-  pcall(require, module)
+  local ok, err = pcall(require, module)
+  if not ok then
+    error("Error loading " .. module .. "\n\n" .. err)
+  end
 end

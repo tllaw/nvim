@@ -1,3 +1,7 @@
-local _, marks = pcall(require, 'marks')
+local ok, marks = pcall(require, 'marks')
+
+if not ok then
+  return
+end
 
 marks.setup {}

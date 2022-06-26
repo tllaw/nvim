@@ -1,23 +1,7 @@
-local _, nvim_treesitter_config = pcall(require, 'nvim-treesitter.configs')
+local ok, nvim_treesitter = pcall(require, 'nvim-treesitter')
 
-nvim_treesitter_config.setup {
-  ensure_installed = { 'ruby', 'typescript', 'scss' },
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = "gnn",
-      node_incremental = "grn",
-      scope_incremental = "grc",
-      node_decremental = "grm",
-    },
-  },
-  rainbow = {
-    enable = true,
-    extended_mode = true,
-    max_file_lines = nil
-  }
-}
+if not ok then
+  return
+end
+
+nvim_treesitter.setup {}

@@ -1,4 +1,9 @@
 local opt = vim.opt
+local g = vim.g
+
+---------------------
+-- general options --
+---------------------
 
 -- indentation
 opt.tabstop = 2
@@ -11,7 +16,9 @@ opt.shiftround = true
 opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 10
+opt.sidescrolloff = 10
 opt.cursorline = true
+opt.showmode = false
 opt.list = true
 opt.listchars:append {
   eol = '↵',
@@ -37,12 +44,14 @@ opt.lazyredraw = true
 -- sign column
 opt.signcolumn = 'yes'
 
--- undo file
+-- undofile
 opt.undofile = true
 
--- colorscheme
--- plugin variables
+--------------------
+-- plugin options --
+--------------------
+
+-- nord
 vim.cmd [[
-  colorscheme tokyonight
-  let g:coq_settings = { 'auto_start': 'shut-up' }
+  colorscheme nord
 ]]
