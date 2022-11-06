@@ -31,7 +31,8 @@ require('packer').startup(function(use)
   use 'phaazon/hop.nvim'
 
   -- finder
-  use 'kevinhwang91/rnvimr'
+  use 'rbgrouleff/bclose.vim'
+  use 'francoiscabrol/ranger.vim'
   use 'ibhagwan/fzf-lua'
 
   -- display
@@ -190,9 +191,9 @@ require('scrollbar').setup {}
 -- which-key
 require('which-key').setup {}
 
--- rnvimr
+-- ranger.vim
 vim.cmd [[
-  let g:rnvimr_presets = [{'width': 0.950, 'height': 0.950}]
+  let g:ranger_map_keys = 0
 ]]
 
 
@@ -266,8 +267,8 @@ map('n', '<leader>hw', ':HopWord<cr>')
 map('n', '<leader>hp', ':HopPattern<cr>')
 map('n', '<leader>hl', ':HopLine<cr>')
 
--- rnvimr
-map('n', '<leader>/', ':RnvimrToggle<cr>')
+-- ranger.vim
+map('n', '<leader>/', ':Ranger<cr>')
 
 -- fzf-lua
 map('n', '<leader>ff', ':FzfLua files<cr>')
